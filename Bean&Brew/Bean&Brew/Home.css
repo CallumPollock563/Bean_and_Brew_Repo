@@ -1,0 +1,376 @@
+*{
+
+   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* BODY */
+body {
+  margin: 0;
+  background: repeating-linear-gradient(
+    to right,
+    #ffb9da 0 4%,
+    #ffd6e9 4% 8%
+  );
+  font-family: "Comic Sans MS";
+  
+}
+
+@media (max-width: 600px) {
+  body {
+  margin: 0;
+  background: repeating-linear-gradient(
+    to right,
+    #ffb9da 0 20%,
+    #ffd6e9 20% 40%
+    );
+    font-family: "Comic Sans MS";
+  }
+}
+
+#header{
+  position: fixed;
+  width: 100%;
+  transition: 0.4s ease;
+   top: 0;
+
+   z-index: 1;
+}
+
+
+
+/* NAVBAR */
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background-color: #ffb9da;
+  padding: 0 20px;
+  z-index: 1;
+  
+}
+
+/* LEFT LOGO */
+.nav-left img {
+  
+  width: 45px;
+  
+  
+}
+.secret{
+  position:absolute;
+  top: 10px;
+  left:20px;
+}
+.secret img{
+  width: 45px;
+}
+
+/* CENTER LOGO (perfectly centered on page) */
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  
+}
+
+.nav-center img {
+  
+  width: 100px;
+  
+}
+
+@media (max-width: 600px) {
+  .nav-center {
+    position: absolute;
+    left: 35%;
+    
+    
+    
+  }
+
+  .nav-center img {
+  
+    width: 80px;
+  
+  } 
+
+
+}
+
+
+
+/* RIGHT BUTTONS */
+.nav-right {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-right a {
+  height: 45px;
+  aspect-ratio: 1/1;
+  
+  border-radius: 22.5px;
+  border: 1px solid black;
+  background-color: #ffd6e9;
+  cursor: pointer;
+ 
+  text-align: center;
+  align-content: center;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-right a img {
+  
+  
+  width: 30px;
+  
+  
+}
+
+.nav-right a:hover {
+  background-color: #ffb9da;
+  text-decoration: underline;
+}
+
+/* DIVIDER LINE */
+.outline {
+  background-color: black;
+  height:2px;
+  width: 100%;
+}
+
+/* MAIN */
+main {
+  margin: 0;
+}
+
+/* LOGO SECTION */
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6vw;
+  margin-bottom: 4vh;
+  margin-top:10vh;
+  width: 100%;
+}
+
+/* SIDE BEAR LOGOS */
+.left-logo img{
+  height: 15vw;
+  transition: 5s, width 0s, height 0s;
+  
+
+}
+.right-logo img {
+  height: 15vw;
+ 
+  transition: 0.5s, width 0s, height 0s ease;
+}
+
+.right-logo img:hover{
+
+  transform: rotate(360deg);
+  
+}
+
+.left-logo img:hover{
+
+  transform: translate(55vw,0);
+  
+}
+
+/* BIG CENTER LOGO */
+.mid-logo img {
+  height: 20vw;
+}
+
+/* BUTTON ROW */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  margin-top: 2vh;
+  
+}
+
+.buttons a {
+     font-family: "Comic Sans MS";
+    font-size: 3vw;
+    text-decoration: none;
+    color: black;
+  }
+
+@media (max-width: 600px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .buttons a {
+     font-family: "Comic Sans MS";
+    font-size: 8vw;
+  }
+}
+
+  
+
+
+
+.buttons a {
+  
+  padding: 1vh 2.5vw;
+  border-radius: 25px;
+  border: none;
+  background: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttons a:hover {
+  text-decoration: underline;
+}
+
+
+
+.offers {
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  
+
+  
+  
+  
+  flex-wrap: wrap;
+
+}
+
+.offers div {
+  
+  width: 20%;  
+  margin: 4%;
+  
+  
+  outline: 3px solid black;
+  background-color: white;
+   transition: width 1s,height 1s;
+  
+}
+
+.offers div:hover {
+  width: 35%;
+  
+  
+}
+
+
+
+.offers div img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  
+}
+
+
+
+@media (max-width: 600px) {
+  .offers div {
+    width: 50%; 
+  }
+
+  .offers div:hover {
+  width: 80%;
+  height: 80%;
+  
+  }
+
+
+}
+
+
+
+
+.transition{
+  margin: 0;
+  padding: 0;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.transition-row{
+   margin: 0;
+  padding: 0;
+    flex:1;
+    display: flex;
+    
+    width: 100%;
+
+}
+
+.transition-row.row-1 .block{
+   margin: 0;
+  padding: 0;
+    transform-origin: top;
+}
+
+.transition-row.row-2 .block{
+   margin: 0;
+  padding: 0;
+    transform-origin: bottom;
+    
+}
+
+.block {
+   
+  padding: 0;
+    flex:1;
+    
+    transform: scaleY(1.02);
+    transform: scaleX(1.02);
+    min-width: 0;
+    will-change: transform;
+
+    transition: ease;
+    
+}
+
+.one{
+  
+  
+  background-color: #ffb9da;
+}
+
+.two{
+  background-color:  #ffd6e9 ;
+}
+
+.block img{
+ 
+  width: 100%;
+}
+
+
+
+   
+
+
+
+
