@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Menu.css">
+    <title>Menu</title>
+</head>
+
+<body>
+
+<div class="transition">
+
+    <div class="transition-row row-1">
+        <div class="block one"></div>
+        <div class="block two"></div>
+        <div class="block one"><img src="logo.png" alt="logo"></div>
+        <div class="block two"></div>
+        <div class="block one"></div>
+    </div>
+
+    <div class="transition-row row-2">
+        <div class="block one"><img src="logoLeft.png" alt="logoLeft"></div>
+        <div class="block two"></div>
+        <div class="block one"><img src="midLogo.png" alt="midLogo"></div>
+        <div class="block two"></div>
+        <div class="block one"><img src="logoRight.png" alt="logoRight"></div>
+    </div>
+
+</div>
+
+
+
+<section id="header">
+    <h2 style="display:none;">Header Navigation</h2>
+
+    <nav class="navbar">
+
+        <div class="nav-left">
+            <a href="index.html"><img src="logo.png" alt="logo"></a>
+        </div>
+
+        <div class="nav-center">
+            <a href="index.html"><img src="midLogo.png" alt="midLogo"></a>
+        </div>
+
+        <div class="nav-right">
+
+            <a href="Menu.html" class="nav-btn">Menu</a>
+
+            <a href="Contact.html" class="nav-btn">
+                <img src="phone.png" alt="phone">
+            </a>
+
+            <a href="Contact.html" class="nav-btn">
+                <img src="email.png" alt="email">
+            </a>
+
+        </div>
+
+    </nav>
+
+    <div class="outline"></div>
+
+</section>
+
+
+
+<section>
+    <h2 style="display:none;">Side Menu</h2>
+
+    <nav class="menu-box">
+
+        <a href="index.html"><p>Home</p></a>
+        <a href="Menu.html"><p class="active">MENU</p></a>
+        <a href="Allergens.html"><p>Allergens</p></a>
+        <a href="Contact.html#contacts"><p>Contacts</p></a>
+        <a href="Contact.html#booking"><p>Booking</p></a>
+        <a href="About.html"><p class="menu-link">About Us</p></a>
+
+    </nav>
+
+</section>
+
+
+
+<main>
+
+    <h1>Menu</h1>
+
+    <section class="sec">
+        <h2 style="display:none;">Food Menu Items</h2>
+
+        <div class="sec1" id="fish"><p>fish</p></div>
+        <div class="aler"><img src="smallfish.png" alt="smallfish"></div>
+
+        <div class="sec1" id="wheat"><p>wheat</p></div>
+        <div class="aler">
+            <img src="smallwheat.png" alt="smallwheat">
+            <img src="smallcow.png" alt="smallcow">
+        </div>
+
+        <div class="sec1" id="nuts"><p>nuts</p></div>
+        <div class="aler"><img src="smallcow.png" alt="smallcow"></div>
+
+        <div class="sec1" id="cow"><p>cow</p></div>
+        <div class="aler"><img src="smallcow.png" alt="smallcow"></div>
+
+        <div class="sec1" id="cownuts"><p>cownuts</p></div>
+        <div class="aler">
+            <img src="smallnut.png" alt="smallnut">
+            <img src="smallcow.png" alt="smallcow">
+        </div>
+
+        <div class="sec1" id="egg"><p>Specials</p></div>
+        <div class="aler"><img src="smallegg.png" alt="smallegg"></div>
+
+        <div class="sec1" id="doublenuts"><p>doublenuts</p></div>
+        <div class="aler">
+            <img src="smallpeanut.png" alt="smallpeanut">
+            <img src="smallnut.png" alt="smallnut">
+        </div>
+
+        <div class="sec1" id="egg2"><p>egg2</p></div>
+        <div class="aler"><img src="smallegg.png" alt="smallegg"></div>
+
+        <div class="sec1" id="cowfish"><p>cowfish</p></div>
+        <div class="aler">
+            <img src="smallfish.png" alt="smallfish">
+            <img src="smallcow.png" alt="smallcow">
+        </div>
+
+    </section>
+
+</main>
+
+
+<script>
+    let lastScrollTop = 0;
+    const header = document.getElementById("header");
+
+    window.onscroll = function () {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            header.style.transform = "translateY(-100%)";
+        } else {
+            header.style.transform = "translateY(0)";
+        }
+
+        lastScrollTop = currentScroll;
+    };
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="transition.js"></script>
+
+</body>
+</html>
